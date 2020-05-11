@@ -1,0 +1,202 @@
+2020-05-11 20:49:46,640 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 20:49:46,640 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 20:49:46,642 INFO supervisord started with pid 11438
+2020-05-11 20:49:47,648 INFO spawned: 'nginx' with pid 11455
+2020-05-11 20:49:47,651 INFO spawned: 'uwsgi' with pid 11456
+2020-05-11 20:49:49,278 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 20:49:49,278 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 20:52:22,519 WARN received SIGINT indicating exit request
+2020-05-11 20:52:22,519 INFO waiting for nginx, uwsgi to die
+2020-05-11 20:52:22,622 INFO stopped: uwsgi (exit status 30)
+2020-05-11 20:52:22,626 INFO stopped: nginx (exit status 0)
+2020-05-11 20:52:23,772 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 20:52:23,772 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 20:52:23,775 INFO supervisord started with pid 11589
+2020-05-11 20:52:24,777 INFO spawned: 'nginx' with pid 11606
+2020-05-11 20:52:24,780 INFO spawned: 'uwsgi' with pid 11607
+2020-05-11 20:52:26,337 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 20:52:26,337 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 20:54:08,669 WARN received SIGINT indicating exit request
+2020-05-11 20:54:08,670 INFO waiting for nginx, uwsgi to die
+2020-05-11 20:54:08,780 INFO stopped: uwsgi (exit status 30)
+2020-05-11 20:54:08,780 WARN received SIGINT indicating exit request
+2020-05-11 20:54:08,783 INFO stopped: nginx (exit status 0)
+2020-05-11 20:54:10,042 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 20:54:10,042 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 20:54:10,045 INFO supervisord started with pid 11807
+2020-05-11 20:54:11,051 INFO spawned: 'nginx' with pid 11824
+2020-05-11 20:54:11,053 INFO spawned: 'uwsgi' with pid 11825
+2020-05-11 20:54:12,635 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 20:54:12,636 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 20:55:15,539 WARN received SIGINT indicating exit request
+2020-05-11 20:55:15,539 INFO waiting for nginx, uwsgi to die
+2020-05-11 20:55:15,647 INFO stopped: uwsgi (exit status 30)
+2020-05-11 20:55:15,648 WARN received SIGINT indicating exit request
+2020-05-11 20:55:15,651 INFO stopped: nginx (exit status 0)
+2020-05-11 20:55:16,900 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 20:55:16,900 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 20:55:16,903 INFO supervisord started with pid 12009
+2020-05-11 20:55:17,910 INFO spawned: 'nginx' with pid 12026
+2020-05-11 20:55:17,912 INFO spawned: 'uwsgi' with pid 12027
+2020-05-11 20:55:19,489 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 20:55:19,489 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 20:57:15,389 WARN received SIGINT indicating exit request
+2020-05-11 20:57:15,390 INFO waiting for nginx, uwsgi to die
+2020-05-11 20:57:15,503 INFO stopped: uwsgi (exit status 30)
+2020-05-11 20:57:15,503 WARN received SIGINT indicating exit request
+2020-05-11 20:57:15,516 INFO stopped: nginx (exit status 0)
+2020-05-11 20:57:16,701 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 20:57:16,701 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 20:57:16,705 INFO supervisord started with pid 12160
+2020-05-11 20:57:17,707 INFO spawned: 'nginx' with pid 12177
+2020-05-11 20:57:17,710 INFO spawned: 'uwsgi' with pid 12178
+2020-05-11 20:57:19,305 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 20:57:19,305 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 20:58:06,262 WARN received SIGINT indicating exit request
+2020-05-11 20:58:06,262 INFO waiting for nginx, uwsgi to die
+2020-05-11 20:58:06,364 INFO stopped: uwsgi (exit status 30)
+2020-05-11 20:58:06,367 INFO stopped: nginx (exit status 0)
+2020-05-11 20:58:25,076 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 20:58:25,076 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 20:58:25,079 INFO supervisord started with pid 12493
+2020-05-11 20:58:26,081 INFO spawned: 'nginx' with pid 12510
+2020-05-11 20:58:26,084 INFO spawned: 'uwsgi' with pid 12511
+2020-05-11 20:58:27,640 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 20:58:27,640 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:01:34,072 WARN received SIGINT indicating exit request
+2020-05-11 21:01:34,072 INFO waiting for nginx, uwsgi to die
+2020-05-11 21:01:34,182 INFO stopped: uwsgi (exit status 30)
+2020-05-11 21:01:34,185 INFO stopped: nginx (exit status 0)
+2020-05-11 21:02:35,283 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 21:02:35,283 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 21:02:35,288 INFO supervisord started with pid 12605
+2020-05-11 21:02:36,292 INFO spawned: 'nginx' with pid 12622
+2020-05-11 21:02:36,295 INFO spawned: 'uwsgi' with pid 12623
+2020-05-11 21:02:37,852 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:02:37,852 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:04:41,919 WARN received SIGINT indicating exit request
+2020-05-11 21:04:41,920 INFO waiting for nginx, uwsgi to die
+2020-05-11 21:04:42,033 INFO stopped: uwsgi (exit status 30)
+2020-05-11 21:04:42,034 WARN received SIGINT indicating exit request
+2020-05-11 21:04:42,037 INFO stopped: nginx (exit status 0)
+2020-05-11 21:05:05,453 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 21:05:05,453 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 21:05:05,462 INFO supervisord started with pid 12860
+2020-05-11 21:05:06,469 INFO spawned: 'nginx' with pid 12878
+2020-05-11 21:05:06,471 INFO spawned: 'uwsgi' with pid 12879
+2020-05-11 21:05:08,074 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:05:08,074 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:09:38,032 WARN received SIGINT indicating exit request
+2020-05-11 21:09:38,032 INFO waiting for nginx, uwsgi to die
+2020-05-11 21:09:38,140 INFO stopped: uwsgi (exit status 30)
+2020-05-11 21:09:38,143 INFO stopped: nginx (exit status 0)
+2020-05-11 21:10:02,809 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 21:10:02,810 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 21:10:02,813 INFO supervisord started with pid 13169
+2020-05-11 21:10:03,819 INFO spawned: 'nginx' with pid 13186
+2020-05-11 21:10:03,822 INFO spawned: 'uwsgi' with pid 13187
+2020-05-11 21:10:05,392 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:10:05,392 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:19:33,303 WARN received SIGINT indicating exit request
+2020-05-11 21:19:33,304 INFO waiting for nginx, uwsgi to die
+2020-05-11 21:19:33,409 INFO stopped: uwsgi (exit status 30)
+2020-05-11 21:19:33,412 INFO stopped: nginx (exit status 0)
+2020-05-11 21:19:57,720 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 21:19:57,720 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 21:19:57,723 INFO supervisord started with pid 13766
+2020-05-11 21:19:58,730 INFO spawned: 'nginx' with pid 13783
+2020-05-11 21:19:58,732 INFO spawned: 'uwsgi' with pid 13784
+2020-05-11 21:20:00,305 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:20:00,306 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:21:43,139 WARN received SIGINT indicating exit request
+2020-05-11 21:21:43,140 INFO waiting for nginx, uwsgi to die
+2020-05-11 21:21:43,250 INFO stopped: uwsgi (exit status 30)
+2020-05-11 21:21:43,250 WARN received SIGINT indicating exit request
+2020-05-11 21:21:43,255 INFO stopped: nginx (exit status 0)
+2020-05-11 21:22:19,443 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 21:22:19,443 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 21:22:19,446 INFO supervisord started with pid 14210
+2020-05-11 21:22:20,449 INFO spawned: 'nginx' with pid 14227
+2020-05-11 21:22:20,452 INFO spawned: 'uwsgi' with pid 14228
+2020-05-11 21:22:20,469 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:22:22,030 INFO spawned: 'nginx' with pid 14240
+2020-05-11 21:22:22,031 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:22:22,051 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:22:24,061 INFO spawned: 'nginx' with pid 14241
+2020-05-11 21:22:24,083 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:22:27,097 INFO spawned: 'nginx' with pid 14242
+2020-05-11 21:22:27,116 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:22:28,117 INFO gave up: nginx entered FATAL state, too many start retries too quickly
+2020-05-11 21:22:34,127 WARN received SIGINT indicating exit request
+2020-05-11 21:22:34,127 INFO waiting for uwsgi to die
+2020-05-11 21:22:34,237 INFO stopped: uwsgi (exit status 30)
+2020-05-11 21:22:34,238 WARN received SIGINT indicating exit request
+2020-05-11 21:22:55,876 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 21:22:55,876 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 21:22:55,878 INFO supervisord started with pid 14376
+2020-05-11 21:22:56,882 INFO spawned: 'nginx' with pid 14393
+2020-05-11 21:22:56,885 INFO spawned: 'uwsgi' with pid 14394
+2020-05-11 21:22:56,901 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:22:58,446 INFO spawned: 'nginx' with pid 14406
+2020-05-11 21:22:58,447 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:22:58,465 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:23:00,475 INFO spawned: 'nginx' with pid 14407
+2020-05-11 21:23:00,494 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:23:01,495 WARN received SIGINT indicating exit request
+2020-05-11 21:23:01,496 INFO waiting for nginx, uwsgi to die
+2020-05-11 21:23:01,612 INFO stopped: uwsgi (exit status 30)
+2020-05-11 21:23:01,613 WARN received SIGINT indicating exit request
+2020-05-11 21:23:41,551 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 21:23:41,551 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 21:23:41,554 INFO supervisord started with pid 14662
+2020-05-11 21:23:42,561 INFO spawned: 'nginx' with pid 14679
+2020-05-11 21:23:42,566 INFO spawned: 'uwsgi' with pid 14680
+2020-05-11 21:23:42,590 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:23:44,149 INFO spawned: 'nginx' with pid 14692
+2020-05-11 21:23:44,150 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:23:44,170 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:23:46,177 INFO spawned: 'nginx' with pid 14693
+2020-05-11 21:23:46,195 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:23:49,207 INFO spawned: 'nginx' with pid 14694
+2020-05-11 21:23:49,225 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:23:50,228 INFO gave up: nginx entered FATAL state, too many start retries too quickly
+2020-05-11 21:23:51,232 WARN received SIGINT indicating exit request
+2020-05-11 21:23:51,233 INFO waiting for uwsgi to die
+2020-05-11 21:23:51,336 INFO stopped: uwsgi (exit status 30)
+2020-05-11 21:23:51,336 WARN received SIGINT indicating exit request
+2020-05-11 21:24:04,140 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 21:24:04,141 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 21:24:04,144 INFO supervisord started with pid 14790
+2020-05-11 21:24:05,147 INFO spawned: 'nginx' with pid 14807
+2020-05-11 21:24:05,150 INFO spawned: 'uwsgi' with pid 14808
+2020-05-11 21:24:05,165 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:24:06,724 INFO spawned: 'nginx' with pid 14820
+2020-05-11 21:24:06,724 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:24:06,749 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:24:08,757 INFO spawned: 'nginx' with pid 14821
+2020-05-11 21:24:08,774 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:24:11,785 INFO spawned: 'nginx' with pid 14822
+2020-05-11 21:24:11,803 INFO exited: nginx (exit status 1; not expected)
+2020-05-11 21:24:12,807 INFO gave up: nginx entered FATAL state, too many start retries too quickly
+2020-05-11 21:24:17,830 WARN received SIGINT indicating exit request
+2020-05-11 21:24:17,831 INFO waiting for uwsgi to die
+2020-05-11 21:24:17,943 INFO stopped: uwsgi (exit status 30)
+2020-05-11 21:24:17,943 WARN received SIGINT indicating exit request
+2020-05-11 21:24:24,175 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 21:24:24,175 INFO Increased RLIMIT_NOFILE limit to 1024
+2020-05-11 21:24:24,179 INFO supervisord started with pid 15013
+2020-05-11 21:24:25,182 INFO spawned: 'nginx' with pid 15030
+2020-05-11 21:24:25,185 INFO spawned: 'uwsgi' with pid 15031
+2020-05-11 21:24:26,748 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:24:26,748 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 21:27:19,911 WARN received SIGINT indicating exit request
+2020-05-11 21:27:19,912 INFO waiting for nginx, uwsgi to die
+2020-05-11 21:27:20,022 INFO stopped: uwsgi (exit status 30)
+2020-05-11 21:27:20,022 WARN received SIGINT indicating exit request
+2020-05-11 21:27:20,026 INFO stopped: nginx (exit status 0)
+2020-05-11 12:57:57,369 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-05-11 12:57:57,372 INFO supervisord started with pid 1
+2020-05-11 12:57:58,374 INFO spawned: 'nginx' with pid 9
+2020-05-11 12:57:58,376 INFO spawned: 'uwsgi' with pid 10
+2020-05-11 12:57:59,728 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-05-11 12:57:59,729 INFO success: uwsgi entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
