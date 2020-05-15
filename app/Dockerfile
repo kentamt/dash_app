@@ -7,6 +7,7 @@ RUN apt update && apt install -y nginx python-pip rsyslog
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 RUN mv etc/nginx.conf /etc/nginx/nginx.conf
+RUN mv etc/.htpasswd /etc/nginx/.htpasswd
 RUN mv etc/uwsgi.ini /etc/uwsgi.ini
 RUN mv etc/supervisord.conf /etc/supervisord.conf
 
