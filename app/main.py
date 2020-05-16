@@ -10,11 +10,13 @@ import numpy as np
 from dash.dependencies import Input, Output, State
 import plotly.graph_objs as go
 
-import GPy
 # from sklearn.model_selection import train_test_split
 # from sklearn.preprocessing import StandardScaler
 # from sklearn import datasets
 # from sklearn.svm import SVC
+from sklearn import gaussian_process as gp
+from sklearn.gaussian_process import kernels as sk_kern
+
 
 import utils.dash_reusable_components as drc
 import utils.figures as figs
@@ -388,8 +390,6 @@ def update_svm_graph(
     gt_fig=go.Scatter(x=x_true, y=y_true,mode='lines',  marker={"color": "blue"}, name='gt')
     traces.append(gt_fig)
 
-    from sklearn import gaussian_process as gp
-    from sklearn.gaussian_process import kernels as sk_kern
     kern = sk_kern.ExpSineSquared() * sk_kern.RBF()
     kernel = sk_kern.RBF(1.0, (1e-3, 1e3)) + sk_kern.ConstantKernel(1.0, (1e-3, 1e3)) + sk_kern.WhiteKernel()
     clf = gp.GaussianProcessRegressor(
