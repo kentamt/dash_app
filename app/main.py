@@ -54,10 +54,10 @@ app.layout = html.Div(
                             id="banner-title",
                             children=[
                                 html.A(
-                                    "Gaussian Process Regression (GPR)",
-                                    href="https://github.com/plotly/dash-svm",
+                                    "Gaussian Process Regression",
                                     style={
-                                        "text-decoration": "none",
+                                        # "text-decoration": "none",
+                                        "font-family" : "courier",
                                         "color": "inherit",
                                     },
                                 )
@@ -98,12 +98,12 @@ app.layout = html.Div(
                                                     "value": "sin"
                                                 },
                                                 {
-                                                    "label": "Cos",
+                                                    "label": "Cos * Cos",
                                                     "value": "cos",
                                                 },
                                                 {
-                                                    "label": "Circles",
-                                                    "value": "circles",
+                                                    "label": "log",
+                                                    "value": "log",
                                                 },
                                             ],
                                             clearable=False,
@@ -134,23 +134,15 @@ app.layout = html.Div(
                                             step=0.1,
                                             value=0.2,
                                         ),
-                                    ],
-                                ),
-                                drc.Card(
-                                    id="button-card",
-                                    children=[
                                         drc.NamedSlider(
-                                            name="Threshold",
-                                            id="slider-threshold",
-                                            min=0,
-                                            max=1,
-                                            value=0.5,
-                                            step=0.01,
+                                            name="Frequency",
+                                            id="slider-freq",
+                                            min=0.1,
+                                            max=10,
+                                            value=1,
+                                            step=0.1,
                                         ),
-                                        html.Button(
-                                            "Reset Threshold",
-                                            id="button-zero-threshold",
-                                        ),
+
                                     ],
                                 ),
                                 drc.Card(
@@ -164,88 +156,33 @@ app.layout = html.Div(
                                                     "label": "Radial basis function (RBF)",
                                                     "value": "rbf",
                                                 },
-                                                {"label": "Linear", "value": "linear"},
-                                                {
-                                                    "label": "Polynomial",
-                                                    "value": "poly",
-                                                },
-                                                {
-                                                    "label": "Sigmoid",
-                                                    "value": "sigmoid",
-                                                },
+                                                # {
+                                                #     "label": "Linear", 
+                                                #     "value": "linear"},
+                                                # {
+                                                #     "label": "Polynomial",
+                                                #     "value": "poly",
+                                                # },
+                                                # {
+                                                #     "label": "Sigmoid",
+                                                #     "value": "sigmoid",
+                                                # },
                                             ],
                                             value="rbf",
                                             clearable=False,
                                             searchable=False,
                                         ),
+
                                         drc.NamedSlider(
-                                            name="Cost (C)",
-                                            id="slider-svm-parameter-C-power",
-                                            min=-2,
-                                            max=4,
-                                            value=0,
-                                            marks={
-                                                i: "{}".format(10 ** i)
-                                                for i in range(-2, 5)
-                                            },
-                                        ),
-                                        drc.FormattedSlider(
-                                            id="slider-svm-parameter-C-coef",
-                                            min=1,
-                                            max=9,
-                                            value=1,
-                                        ),
-                                        drc.NamedSlider(
-                                            name="Degree",
-                                            id="slider-svm-parameter-degree",
-                                            min=2,
+                                            name="Length",
+                                            id="slider-svm-parameter-kernel-length",
+                                            min=0.1,
                                             max=10,
-                                            value=3,
-                                            step=1,
+                                            value=0.5,
                                             marks={
-                                                str(i): str(i) for i in range(2, 11, 2)
+                                                i: f"{i}" for i in range(10)
                                             },
-                                        ),
-                                        drc.NamedSlider(
-                                            name="Gamma",
-                                            id="slider-svm-parameter-gamma-power",
-                                            min=-5,
-                                            max=0,
-                                            value=-1,
-                                            marks={
-                                                i: "{}".format(10 ** i)
-                                                for i in range(-5, 1)
-                                            },
-                                        ),
-                                        drc.FormattedSlider(
-                                            id="slider-svm-parameter-gamma-coef",
-                                            min=1,
-                                            max=9,
-                                            value=5,
-                                        ),
-                                        html.Div(
-                                            id="shrinking-container",
-                                            children=[
-                                                html.P(children="Shrinking"),
-                                                dcc.RadioItems(
-                                                    id="radio-svm-parameter-shrinking",
-                                                    labelStyle={
-                                                        "margin-right": "7px",
-                                                        "display": "inline-block",
-                                                    },
-                                                    options=[
-                                                        {
-                                                            "label": " Enabled",
-                                                            "value": "True",
-                                                        },
-                                                        {
-                                                            "label": " Disabled",
-                                                            "value": "False",
-                                                        },
-                                                    ],
-                                                    value="True",
-                                                ),
-                                            ],
+                                            step=0.1,
                                         ),
                                     ],
                                 ),
@@ -266,49 +203,37 @@ app.layout = html.Div(
                 )
             ],
         ),
-        dcc.Graph(
-                id='example-graph',
-                figure={
-                'data': [
-                    {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'SF'},
-                    {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': u'Montréal'},
-                ],
-                    'layout': {
-                        'title': 'Dash Data Visualization'
-                }
-                }
-            )
   ])
-@app.callback(
-    Output("slider-svm-parameter-gamma-coef", "marks"),
-    [Input("slider-svm-parameter-gamma-power", "value")],
-)
-def update_slider_svm_parameter_gamma_coef(power):
-    scale = 10 ** power
-    return {i: str(round(i * scale, 8)) for i in range(1, 10, 2)}
+# @app.callback(
+#     Output("slider-svm-parameter-gamma-coef", "marks"),
+#     [Input("slider-svm-parameter-gamma-power", "value")],
+# )
+# def update_slider_svm_parameter_gamma_coef(power):
+#     scale = 10 ** power
+#     return {i: str(round(i * scale, 8)) for i in range(1, 10, 2)}
 
 
-@app.callback(
-    Output("slider-svm-parameter-C-coef", "marks"),
-    [Input("slider-svm-parameter-C-power", "value")],
-)
-def update_slider_svm_parameter_C_coef(power):
-    scale = 10 ** power
-    return {i: str(round(i * scale, 8)) for i in range(1, 10, 2)}
+# @app.callback(
+#     Output("slider-svm-parameter-C-coef", "marks"),
+#     [Input("slider-svm-parameter-C-power", "value")],
+# )
+# def update_slider_svm_parameter_C_coef(power):
+#     scale = 10 ** power
+#     return {i: str(round(i * scale, 8)) for i in range(1, 10, 2)}
 
 
-@app.callback(
-    Output("slider-threshold", "value"),
-    [Input("button-zero-threshold", "n_clicks")],
-    [State("graph-sklearn-svm", "figure")],
-)
-def reset_threshold_center(n_clicks, figure):
-    if n_clicks:
-        Z = np.array(figure["data"][0]["z"])
-        value = -Z.min() / (Z.max() - Z.min())
-    else:
-        value = 0.4959986285375595
-    return value
+# @app.callback(
+#     Output("slider-phase", "value"),
+#     [Input("button-zero-threshold", "n_clicks")],
+#     [State("graph-sklearn-svm", "figure")],
+# )
+# def reset_threshold_center(n_clicks, figure):
+#     if n_clicks:
+#         Z = np.array(figure["data"][0]["z"])
+#         value = -Z.min() / (Z.max() - Z.min())
+#     else:
+#         value = 0.4959986285375595
+#     return value
 
 
 # Disable Sliders if kernel not in the given list
@@ -320,105 +245,98 @@ def disable_slider_param_degree(kernel):
     return kernel != "poly"
 
 
-@app.callback(
-    Output("slider-svm-parameter-gamma-coef", "disabled"),
-    [Input("dropdown-svm-parameter-kernel", "value")],
-)
-def disable_slider_param_gamma_coef(kernel):
-    return kernel not in ["rbf", "poly", "sigmoid"]
+# @app.callback(
+#     Output("slider-svm-parameter-gamma-coef", "disabled"),
+#     [Input("dropdown-svm-parameter-kernel", "value")],
+# )
+# def disable_slider_param_gamma_coef(kernel):
+#     return kernel not in ["rbf", "poly", "sigmoid"]
 
 
-@app.callback(
-    Output("slider-svm-parameter-gamma-power", "disabled"),
-    [Input("dropdown-svm-parameter-kernel", "value")],
-)
-def disable_slider_param_gamma_power(kernel):
-    return kernel not in ["rbf", "poly", "sigmoid"]
+# @app.callback(
+#     Output("slider-svm-parameter-gamma-power", "disabled"),
+#     [Input("dropdown-svm-parameter-kernel", "value")],
+# )
+# def disable_slider_param_gamma_power(kernel):
+#     return kernel not in ["rbf", "poly", "sigmoid"]
 
 
 @app.callback(
     Output("div-graphs", "children"),
     [
         Input("dropdown-svm-parameter-kernel", "value"),
-        Input("slider-svm-parameter-degree", "value"),
-        Input("slider-svm-parameter-C-coef", "value"),
-        Input("slider-svm-parameter-C-power", "value"),
-        Input("slider-svm-parameter-gamma-coef", "value"),
-        Input("slider-svm-parameter-gamma-power", "value"),
         Input("dropdown-select-dataset", "value"),
         Input("slider-dataset-noise-level", "value"),
-        Input("radio-svm-parameter-shrinking", "value"),
-        Input("slider-threshold", "value"),
+        Input("slider-freq", "value"),
+        Input("slider-svm-parameter-kernel-length", "value"),
         Input("slider-dataset-sample-size", "value"),
     ],
 )
 def update_svm_graph(
     kernel,
-    degree,
-    C_coef,
-    C_power,
-    gamma_coef,
-    gamma_power,
     dataset,
     noise,
-    shrinking,
-    threshold,
+    freq,
+    length,
     sample_size,
 ):
     t_start = time.time()
     h = 0.3  # step size in the mesh
-
-    x_train = np.random.randint(0, 100, sample_size)
-    x_test = np.linspace(0,100,100)
-    x_true = np.linspace(0,100,100)
-
+    xmax = 5
+    x_train = np.random.rand(sample_size) * xmax
+    x_test = np.linspace(0,xmax,300)
+    x_true = np.linspace(0,xmax,300)
 
     if dataset == "sin":
-        y_train = np.sin(x_train / 100 * 2* np.pi) + np.random.normal(0, noise, len(x_train))
-        y_true = np.sin(x_true / 100 * 2* np.pi)
+        y_train = np.sin(x_train * 2* np.pi * freq / xmax) + np.random.normal(0, noise, len(x_train))
+        y_true = np.sin(x_true* 2 * np.pi * freq / xmax)
     elif dataset == "cos":
-        y_train = np.cos(x_train / 100 * 2* np.pi) + np.random.normal(0, noise, len(x_train))
-        y_true = np.cos(x_true / 100 * 2* np.pi)
+        y_train = np.cos(x_train * 2* np.pi * freq / xmax) * 2.0 * np.sin(x_train * 10 * np.pi * freq / xmax) + np.random.normal(0, noise, len(x_train))
+        y_true = np.cos(x_true * 2* np.pi * freq / xmax) * 2.0 * np.sin(x_true * 10 * np.pi * freq / xmax)
+    elif dataset == "log":
+        y_train = np.log(x_train) + np.random.normal(0, noise, len(x_train))
+        y_true = np.log(x_true) 
+        
     else:
-        pass
-
+        exit()
+        
     traces = []
 
-    input_fig=go.Scatter(x=x_train, y=y_train, hovertext=[], mode='markers+text',textposition="bottom center",hoverinfo="text", marker={'size': 10, "color": "blue"})
+    input_fig=go.Scatter(x=x_train, y=y_train, hovertext=[], mode='markers+text',textposition="bottom center",hoverinfo="text", name="observation", marker={'size': 10, "color": "salmon"})
     traces.append(input_fig)
 
-    gt_fig=go.Scatter(x=x_true, y=y_true,mode='lines',  marker={"color": "blue"}, name='gt')
+    gt_fig=go.Scatter(x=x_true, y=y_true,mode='lines',  marker={"color": "salmon"}, name='ground truth')
     traces.append(gt_fig)
 
     kern = sk_kern.ExpSineSquared() * sk_kern.RBF()
-    kernel = sk_kern.RBF(1.0, (1e-3, 1e3)) + sk_kern.ConstantKernel(1.0, (1e-3, 1e3)) + sk_kern.WhiteKernel()
+    kernel = sk_kern.RBF(length, (1e-3, 1e3)) + sk_kern.ConstantKernel(length, (1e-3, 1e3)) + sk_kern.WhiteKernel()
+    
     clf = gp.GaussianProcessRegressor(
         kernel=kernel,
         alpha=1e-10, 
         optimizer="fmin_l_bfgs_b", 
-        n_restarts_optimizer=20,
+        n_restarts_optimizer=30,
         normalize_y=True)
 
     clf.fit(x_train.reshape(-1, 1), y_train.reshape(-1, 1))
-    # clf.kernel_ # < RBF(length_scale=0.374) + 0.0316**2 + WhiteKernel(noise_level=0.00785)
-    
+        
     pred_mean, pred_std= clf.predict(x_test.reshape(-1,1), return_std=True)
     pred_mean_fig = go.Scatter(x=x_test, y=pred_mean[:,0], mode='lines', marker=dict(color="darkturquoise"), name='pred-mean')
     traces.append(pred_mean_fig)    
     
     pred_ustd_fig = go.Scatter(x=x_test, y=(pred_mean + 3*pred_std)[:,0], mode='lines', line=dict(color="#888888", dash="dash"), name='pred-3-std')
-    pred_lstd_fig = go.Scatter(x=x_test, y=(pred_mean - 3*pred_std)[:,0], mode='lines', line=dict(color="#888888", dash="dash"), name='pred-3-std')
+    pred_lstd_fig = go.Scatter(x=x_test, y=(pred_mean - 3*pred_std)[:,0], mode='lines', line=dict(color="#888888", dash="dash"), name='')
     traces.append(pred_ustd_fig)    
     traces.append(pred_lstd_fig)    
     
     
     figure={
         "data": traces,
-        "layout": go.Layout(title='GPR', showlegend=False, hovermode='closest',
+        "layout": go.Layout(title='GPR', showlegend=True, hovermode='closest',
                             margin={'b': 40, 'l': 40, 'r': 40, 't': 100},
                             clickmode='event+select',
                             plot_bgcolor="#282b38", 
-                            paper_bgcolor="#282b38"
+                            paper_bgcolor="#282b38",
                             )
         }
 

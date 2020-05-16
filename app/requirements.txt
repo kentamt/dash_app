@@ -7,4 +7,4 @@ matplotlib==3.2.1
 uWSGI==2.0.18
 supervisor==4.2.0
 sklearn==0.0
-colorlover==0.3.0
+colorlover==0.3.0   
