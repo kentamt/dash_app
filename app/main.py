@@ -52,7 +52,7 @@ app.layout = html.Div(
                             id="banner-title",
                             children=[
                                 html.A(
-                                    "Gaussian Process Regression (GPR) Explorer",
+                                    "Gaussian Process Regression (GPR)",
                                     href="https://github.com/plotly/dash-svm",
                                     style={
                                         "text-decoration": "none",
