@@ -4,7 +4,7 @@ pandas==1.0.3
 dash==1.11.0
 tabulate==0.8.7
 matplotlib==3.2.1
-uWSGI==2.0.18
+uWSGI==2.0.22
 supervisor==4.2.0
 sklearn==0.0
 colorlover==0.3.0   
